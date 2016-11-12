@@ -17,7 +17,7 @@ $('#lightgallery').rebuildLightGallery();
 
 ## Might not Work Properly
 
-This simple hacks work properly on the following modules `lightGallery`:
+This simple hacks work properly on the following modules of `lightGallery`:
 
 - Thumbnail
 - autoplay
@@ -25,6 +25,6 @@ This simple hacks work properly on the following modules `lightGallery`:
 - pager
 - zoom
 
-## Have much better work around ?
+## Have much better work around?
 
 Please let me know.
