@@ -15,6 +15,8 @@ Just append the items to your list of items and simply execute below.
 $('#lightgallery').rebuildLightGallery();
 ```
 
+NOTE! Should be included after `lightGallery`.
+
 ## Might not Work Properly
 
 This simple hacks work properly on the following modules of `lightGallery`:
