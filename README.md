@@ -7,6 +7,10 @@ A very simple hack of https://github.com/sachinchoolur/lightGallery to refresh l
 
 For some reasons, we want to add items loaded via ajax. Say, you have a list of images and has a load more function. Unfortunately, you need to destroy the `lightGallery` instance and re instantiate it.
 
+## Installation
+
+include after `.../lightgallery.js`.
+
 ## Usage
 
 Just append the items to your list of items and simply execute below.
@@ -15,7 +19,6 @@ Just append the items to your list of items and simply execute below.
 $('#lightgallery').rebuildLightGallery();
 ```
 
-NOTE! Should be included after `lightGallery`.
 
 ## Might not Work Properly
 
