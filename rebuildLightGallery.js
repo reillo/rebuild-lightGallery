@@ -42,6 +42,12 @@
 					ins.$slide = ins.$outer.find('.lg-item');
 
 					// reset specific modules
+					if (ins.modules.zoom) {
+						$('#lg-zoom-in, #lg-zoom-out, #lg-actual-size').remove();
+						ins.modules['zoom'].destroy();
+						ins.modules['zoom'] = new $.fn.lightGallery.modules['zoom'](ins.el);
+					}
+
 					if (ins.modules.Thumbnail) {
 						if (ins.lGalleryOn) {
 							ins.modules['Thumbnail'].destroy();
