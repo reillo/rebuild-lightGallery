@@ -38,12 +38,14 @@
 				}
 
 				// recount slides
-				ins.$slide = ins.$outer.find('.lg-item');
+				if (ins.$outer) {
+					ins.$slide = ins.$outer.find('.lg-item');
 
-				// reset specific modules
-				if (ins.modules.Thumbnail) {
-					ins.modules['Thumbnail'].destroy();
-					ins.modules['Thumbnail'] = new $.fn.lightGallery.modules['Thumbnail'](ins.el);
+					// reset specific modules
+					if (ins.modules.Thumbnail) {
+						ins.modules['Thumbnail'].destroy();
+						ins.modules['Thumbnail'] = new $.fn.lightGallery.modules['Thumbnail'](ins.el);
+					}
 				}
 			}
 		});
