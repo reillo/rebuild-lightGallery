@@ -43,8 +43,17 @@
 
 					// reset specific modules
 					if (ins.modules.Thumbnail) {
-						ins.modules['Thumbnail'].destroy();
-						ins.modules['Thumbnail'] = new $.fn.lightGallery.modules['Thumbnail'](ins.el);
+						if (ins.lGalleryOn) {
+							ins.modules['Thumbnail'].destroy();
+							ins.modules['Thumbnail'] = new $.fn.lightGallery.modules['Thumbnail'](ins.el);
+
+							// toggle gallery off so thumbnail module method animateThumb
+							// would think that it is off so it will not animate and add
+							// the left css value directly
+							ins.lGalleryOn = false;
+							ins.modules['Thumbnail'].animateThumb(ins.index);
+							ins.lGalleryOn = true;
+						}
 					}
 				}
 			}
